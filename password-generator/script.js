@@ -64,9 +64,23 @@ function generatePassword(lower, upper, number, symbol, length) {
 		})
 	}
 
-	const finalPassword = generatedPassword.slice(0, length)
+	const finalPassword = shuffle(generatedPassword.slice(0, length))
 
 	return finalPassword
+}
+
+function shuffle(str) {
+	let arr = str.split('')
+
+	for (let i = arr.length - 1; i > 0; i--) {
+		const randomInt = Math.floor(Math.random() * (i + 1))
+
+		let temp = arr[i]
+		arr[i] = arr[randomInt]
+		arr[randomInt] = temp
+	}
+
+	return arr.join('')
 }
 
 function getRandomLower() {
