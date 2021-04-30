@@ -39,8 +39,8 @@ input[type='range'] + label {
 	background-color: #fff;
 	position: absolute;
 	top: -25px;
-	left: 110px;
-	width: 60px;
+	left: 130px;
+	width: 40px;
 	padding: 5px 0;
 	text-align: center;
 	border-radius: 4px;
